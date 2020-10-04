@@ -1,26 +1,75 @@
 Change logs
 ===========
 
+`Version 0.5.2 <https://github.com/konlpy/konlpy/releases/tag/v0.5.2>`_
+-----------------------------------------------------------------------
+
+Released on Dec 3, 2019.
+
+- Added normalize method to Okt [:issue:`100` by :committer:`lifefeel`]
+- Added data acquisition features from Koshort [:issue:`211` by :committer:`nyanye`]
+- Added docker installation steps [:issue:`252` by :committer:`raccoonyy`]
+- Updated Mecab to mecab-0.996-ko-0.9.2 and mecab-ko-dic-2.1.1-20180720 [:issue:`214` by :committer:`rickiepark`]
+- Added Python 2 warning at the install.rst [:issue:`277` by :committer:`minhoryang`]
+- Added methods to make Mecab picklable [:issue:`234` by :committer:`rickiepark`] [:issue:`258` by :committer:`rickiepark`]
+- Added tests for coverage [:issue:`261` by :committer:`minhoryang`] [:issue:`262` by :committer:`minhoryang`]
+- Fixed Komoran not to POS tag empty sentences [:issue:`201` by :committer:`lovit`]
+- Fixed JPype usage by adding numpy as dependency [:issue:`246` by :committer:`e9t`]
+- Fixed to use tweepy 3.7.0+ to avoid collision with Python 3.7+ [:issue:`243` by :committer:`shurain`]
+- Fixed to use JPype 0.7.0+ to remove warning message [:issue:`245` by :committer:`e9t`]
+- Fixed to use lxml 4.1.0+ to avoid installation errors [:issue:`242` by :committer:`shurain`]
+- Fixed stream.google_trend test fail [:issue:`244` by :committer:`shurain`]
+- Fixed by removing .decode in Mecab.pos for Python3 usage [:issue:`108` by :committer:`ty91`]
+- Updated Mecab installation script [:issue:`158` by :committer:`HaebinShin`], [:issue:`247` by :committer:`e9t`], [:issue:`255` by :committer:`HaebinShin`], [:issue:`277` by :committer:`minhoryang`]
+- Lower-bound Java Compile Version [:issue:`259` by :committer:`e9t`]
+
+`Version 0.5.1 <https://github.com/konlpy/konlpy/releases/tag/v0.5.1>`_
+-----------------------------------------------------------------------
+
+Released on Aug 3, 2018.
+
+- Added JVM memory option to backends [:issue:`199` by :committer:`lovit`]
+
+`Version 0.5.0 <https://github.com/konlpy/konlpy/releases/tag/v0.5.0>`_
+-----------------------------------------------------------------------
+
+Released on Aug 1, 2018.
+
+- Added userdic to Komoran [:issue:`87` by :committer:`lovit`]
+- Added `stream` parameter to pprint [:issue:`179` by :committer:`jaejunh`]
+- Added `join` parameter to POS taggers [:issue:`135` by :committer:`pinetree408`]
+- Fixed JPype-related installation error [:issue:`94` by :committer:`shaynekang`]
+- Moved description.py to konlpy/about.py [:issue:`194`]
+- Refactored Java code [:issue:`86` by :committer:`mwkang`]
+- Replaced wildcard expansion in `mecab.sh` [:issue:`161` by :committer:`j-min`]
+- Updated Komoran from 2.4 to 3.0 and add userdic [:issue:`198` by :committer:`lovit`]
+- Updated Twitter from 2.4.3 to okt-2.1.0 [:issue:`156` by :committer:`zsef123`]
+
+.. warning::
+
+    Previous `dicpath` in Komoran's API is now `modelpath`.
+    The name was changed to prevent confusion with the newly added `userdic`.
+
 `Version 0.4.4 <https://github.com/konlpy/konlpy/releases/tag/v0.4.4>`_
 -----------------------------------------------------------------------
 
 Released on Oct 25, 2015.
 
-- Include tagsets for each morpheme analyzer [:commit:`26a39d7`]
+- Included tagsets for each morpheme analyzer [:commit:`26a39d7`]
 
 `Version 0.4.3 <https://github.com/konlpy/konlpy/releases/tag/v0.4.3>`_
 -----------------------------------------------------------------------
 
 Released on Feb 27, 2015.
 
-- Fix conditional requirement bug for pip3 [:issue:`50`]
+- Fixed conditional requirement bug for pip3 [:issue:`50`]
 
 `Version 0.4.2 <https://github.com/konlpy/konlpy/releases/tag/v0.4.2>`_
 -----------------------------------------------------------------------
 
 Released on Feb 25, 2015.
 
-- Update Korean documents (i.e., include missing .mo files)
+- Updated Korean documents (i.e., include missing .mo files)
 
 `Version 0.4.1 <https://github.com/konlpy/konlpy/releases/tag/v0.4.1>`_
 -----------------------------------------------------------------------
@@ -90,6 +139,7 @@ Released on Aug 25, 2014.
 - Added license: GPL v3 or above
 - Added pretty print function for Unicode
 - Added noun extractor to Mecab
+- Enabled installation via ``pip``
 - Fixed Hannanum, Kkma module bug where it couldn't handle empty input strings
 
 .. warning::
@@ -104,7 +154,7 @@ Released on Aug 1, 2014.
 - Changed API by explicitly initializing JVM for Hannanum
 - Added Mecab module with MeCab-0.996-ko-0.9.1
 - Added unit tests
-- Added test automation with Travis CI 
+- Added test automation with Travis CI
 - Fixed Hannanum module parsing error when '/', '+' are in text
 - Fixed Hannanum module text indexing error (where results get truncated)
 

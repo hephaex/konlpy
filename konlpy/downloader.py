@@ -1,6 +1,5 @@
-#! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
-
+from __future__ import absolute_import
 
 import hashlib
 import json
@@ -9,12 +8,13 @@ import subprocess
 import sys
 import tarfile
 import zipfile
+
 if sys.version_info[0] < 3:
     import urllib
 else:
     import urllib.request as urllib
 
-from . import internals
+from konlpy import internals
 
 
 def default_download_dir():
@@ -60,6 +60,9 @@ class Downloader(object):
     INSTALLED = 'installed'
     NOT_INSTALLED = 'not installed'
     STALE = 'corrupt or out of date'
+
+    def __init__(self, download_dir=None):
+        self._download_dir = download_dir
 
     def download(self, id=None, download_dir=None):
         """The KoNLPy data downloader.
@@ -220,8 +223,6 @@ class Downloader(object):
         else:
             raise ValueError("Could not find a matching item to download")
 
-    def __init__(self, download_dir=None):
-        self._download_dir = download_dir
 
 # Aliases
 _downloader = Downloader(default_download_dir())

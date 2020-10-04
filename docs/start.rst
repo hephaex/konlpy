@@ -6,12 +6,11 @@ NLP (Natural Language Processing) is a set of techniques for analyzing and extra
 We have various NLP applications in our lives. For example:
 
 - Text summarization (ex: `Summly <http://www.summly.com/index.html>`_)
-- Question answering (ex: `Wolfram Alpha <http://www.wolframalpha.com/input/?i=what+is+the+meaning+of+life&lk=4&num=1>`_)
 - Dialogue systems (ex: `Apple Siri <https://www.apple.com/ios/siri/>`_)
 - Machine translation (ex: `Google Translate <http://translate.google.com>`_)
 
 And obviously information retrieval systems such as Web search engines.
-For a better understanding of NLP techniques, consider referring the so-called "bibles":
+For a better understanding of NLP techniques, consider referring to the so-called "bibles":
 
 - Jurafsky et al., `Speech and Language Processing <https://www.goodreads.com/book/show/908048>`_, 2nd Edition, 2008.
 - Manning and Schutze, `Foundations of Statistical Natural Language Processing <https://www.goodreads.com/book/show/776349>`_, 1999.
